@@ -1,0 +1,41 @@
+:root {
+  /* #343a40 */
+  /* #e9ecef */
+  --sidebar-bg-color: #8d722a; /* لون خلفية الشريط الجانبي (sidebar) في الوضع النهاري */
+  --content-bg-color: #f8f9fa; /* لون خلفية المحتوى الرئيسي في الصفحة في الوضع النهاري */
+  --navbar-bg-color: #baa76b; /* لون خلفية شريط التنقل (navbar) في الوضع النهاري */
+  --navbar-text-color: #000; /* لون النص في شريط التنقل (navbar) في الوضع النهاري */
+  --divider-bg-color: #ccc; /* لون الخط الفاصل (divider) في الوضع النهاري */
+}
+/* #3a3d41 */
+[data-bs-theme="dark"] {
+  --sidebar-bg-color: #061c39; /* لون خلفية الشريط الجانبي (sidebar) في الوضع الداكن */
+  --content-bg-color: #2c2f33; /* لون خلفية المحتوى الرئيسي في الصفحة في الوضع الداكن */
+  --navbar-bg-color: #1b3250; /* لون خلفية شريط التنقل (navbar) في الوضع الداكن */
+  --navbar-text-color: #fff; /* لون النص في شريط التنقل (navbar) في الوضع الداكن */
+  --divider-bg-color: #666; /* لون الخط الفاصل (divider) في الوضع الداكن */
+}
+
+/* تطبيق الألوان على عناصر الصفحة */
+body {
+  background-color: var(--content-bg-color);
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+/* تحديث لون النص في navbar */
+.navbar a, .navbar form {
+  color: var(--navbar-text-color);
+}
+
+
+
+
+

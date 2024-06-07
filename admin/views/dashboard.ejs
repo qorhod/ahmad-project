@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" data-bs-theme="auto">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <script src="/admin/public/js/theme-toggle.js"></script>
+    <link rel="stylesheet" href="/admin/public/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css" />
+    <link rel="shortcut icon" href="/admin/public/img/ali.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <title>لوحة التحكم</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/admin/public/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/admin/public/css/dark-light.css"/>
+    <link href="/admin/public/css/dashboard.css" rel="stylesheet" />
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 250px;
+            background-color: var(--sidebar-bg-color);
+            padding-top: 20px;
+        }
+        .content {
+            margin-right: 260px; /* نفس عرض الـ sidebar + 10px */
+            width: calc(100% - 270px); /* نفس عرض الـ sidebar + 20px */
+            background-color: var(--content-bg-color);
+        }
+        .navbar {
+            margin-right: 260px; /* نفس عرض الـ sidebar + 10px */
+            background-color: var(--navbar-bg-color);
+        }
+        .sidebar-divider {
+            position: fixed;
+            top: 0;
+            right: 250px;
+            height: 100%;
+            width: 10px;
+            background-color: var(--divider-bg-color);
+        }
+        .sidebar .logo-img {
+            height: 50px;
+            width: 50px;
+        }
+        .sidebar .factory-img {
+            height: 40px;
+            width: 40px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Admin Dashboard</h1>
+<body dir="rtl">
+    <header>
+        <%- include('components/navbar.ejs') %>
+    </header>
+    <main>
+        <div class="sidebar-divider"></div> <!-- الفاصل -->
+        <%- include('components/sidebar.ejs', {currentPage:"dashboard"}) %>
+        <section class="content p-4 mt-4">
+            <div class="theme-toggle-container text-end">
+                <button class="btn btn-light btn-toggle" data-bs-theme-value="light">
+                    <i class="bi bi-sun"></i> الوضع النهاري
+                </button>
+                <button class="btn btn-dark btn-toggle" data-bs-theme-value="dark">
+                    <i class="bi bi-moon"></i> الوضع الليلي
+                </button>
+            </div>
+            <h1 class="mt-4">مرحباً بك في لوحة التحكم</h1>
+            <p>هذه لوحة التحكم الخاصة بك. يمكنك إدارة البيانات من هنا.</p>
+        </section>
+    </main>
+    <script src="/admin/public/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin/public/js/main.js"></script>
 </body>
 </html>
