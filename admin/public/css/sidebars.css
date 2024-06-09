@@ -79,3 +79,27 @@ html {
 .sidebar .nav-link svg {
   margin-left: 8px;
 }
+
+
+
+
+
+.sidebar {
+  width: 250px;
+  transition: width 0.3s;
+}
+
+.small-sidebar {
+  width: 80px;
+}
+
+.sidebar .sidebar-text {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.small-sidebar .sidebar-text {
+  opacity: 0;
+}
+

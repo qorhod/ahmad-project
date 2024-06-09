@@ -10,4 +10,11 @@ router.post('/', adminController.postLogin);
 // مسار لوحة التحكم
 router.get('/dashboard', adminController.getDashboard);
 
+
+
+
+router.get('/add-user', adminController.addUser);
+
+
+
 module.exports = router;

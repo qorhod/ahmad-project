@@ -20,3 +20,9 @@ exports.getDashboard = (req, res) => {
     const user = { profileImage: '/admin/public/images/user.png', userName: 'Admin' }; // مثال على تعريف المستخدم
     res.render(path.join(__dirname, '../views/dashboard'), { user });
 };
+
+// عرض صفحة إضافة مستخدم
+exports.addUser = (req, res) => {
+    const user = { profileImage: '/admin/public/images/user.png', userName: 'Admin' }; // مثال على تعريف المستخدم
+    res.render(path.join(__dirname, '../views/addUser'), { user });
+};
